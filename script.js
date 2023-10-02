@@ -1,11 +1,10 @@
 let string = ''
 let buttons = document.querySelectorAll('button')
 
-
 Array.from(buttons).forEach((item) => {
     item.addEventListener('click', (e) => {
         if (e.target.innerHTML === "=") {
-            string = eval(string)
+            string = eval(string).toString()
             document.querySelector('input').value = string
         }
         else if (e.target.innerHTML === "RESET") {
